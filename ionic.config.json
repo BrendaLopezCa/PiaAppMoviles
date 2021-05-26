@@ -1,0 +1,7 @@
+{
+  "name": "MediaApp_PIA_APP_MOV",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

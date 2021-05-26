@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class ="ion-text-center">UBICACIÓN</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <!--<div class="ion-padding" style="text-align: center;">
+    <ion-label>Coords</ion-label><br><br>
+    <ion-label>Latitud: {{latitud}} | Longitud: {{longitud}}</ion-label>
+  </div>-->
+
+<!--ESTE BOTON SOLO ES TEMPORAL, PARA PROBAR QUE FUNCIONA, LA APLICACION PIDE PERMISO 
+PARA LA LOCALIZACION ANTES DE OBTENERLA, POR LO TANTO NO SE NECESITA-->
+  <!--<div class ="ion-padding">
+      <ion-button expand="full" (click)=obtenerCoordenadas()>obtener</ion-button> 
+  </div>-->
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Mapa</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="MAPA"></app-explore-container>
+  <div id="map"></div>
+  
+</ion-content>

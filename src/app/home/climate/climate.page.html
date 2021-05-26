@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class ="ion-text-center">CLIMA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="clima">
+  <ion-grid *ngIf="climate">
+    <ion-row>
+      <ion-col width-50 offset-25>
+        <h2 class="location">{{climate.location.name}} </h2>
+        <div class="icon"><img src="{{climate.current.condition.icon}}" alt=""></div>
+        <h3 class="desc">{{climate.current.condition.text}} </h3>
+        <h1 class="temp"> {{climate.current.temp_c}}&deg;</h1>
+      </ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col width-100>
+        <ion-list>
+          <ion-item>
+            <strong>Temperatura: </strong> &nbsp;{{climate.current.temp_c}}&deg; C ({{climate.current.temp_f}}&deg; F)
+          </ion-item>
+          <ion-item>
+            <strong>Viento: </strong>&nbsp; {{climate.current.wind_kph}} km/h
+          </ion-item>
+          <ion-item>
+            <strong>Humedad: </strong>&nbsp; {{climate.current.humidity}}%
+          </ion-item>
+          <ion-item>
+            <strong>Precipitación: </strong>&nbsp; {{climate.current.precip_mm}}mm
+          </ion-item>
+          <ion-item>
+            <strong>Presión atmosférica :</strong>&nbsp; {{climate.current.pressure_mb}}mb
+         </ion-item>
+        </ion-list>
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
+
+</ion-content>
